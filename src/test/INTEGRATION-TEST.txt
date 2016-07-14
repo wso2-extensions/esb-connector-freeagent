@@ -13,7 +13,7 @@ Tested Platform:
 
  - UBUNTU 14.04
  - Mac OSx 10.9
- - WSO2 ESB 4.9.0
+ - ESB 5.0.0-BETA
  - Java 1.7
 
 Note:
@@ -23,7 +23,7 @@ Note:
 
 Steps to follow in setting integration test.
 
- 1. Download ESB 4.9.0 zip from the following the URL: https://svn.wso2.org/repos/wso2/scratch/ESB/.
+ 1.Download ESB 5.0.0-BETA from official website. Extract the ESB and put "-XX:-UseSplitVerifier" under $JVM_MEM_OPTS into {ESB_HOME}/bin/wso2server.sh.
 
  2. Extract the certificate using the relevant apiUrl (e.g. "https://api.sandbox.freeagent.com") and place the certificate file 	in following locations.
 

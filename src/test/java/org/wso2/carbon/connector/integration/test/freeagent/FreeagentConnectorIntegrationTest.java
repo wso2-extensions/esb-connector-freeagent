@@ -140,7 +140,8 @@ public class FreeagentConnectorIntegrationTest extends ConnectorIntegrationTestB
     /**
      * Positive test case for getContactById method with mandatory parameters.
      */
-    @Test(dependsOnMethods = { "testCreateContactWithMandatoryParameters" }, groups = { "wso2.esb" }, description = "freeagent {getContactById} integration test with mandatory parameters.")
+    @Test(dependsOnMethods = { "testCreateContactWithMandatoryParameters" }, groups = { "wso2.esb" },
+            description = "freeagent {getContactById} integration test with mandatory parameters.")
     public void testGetContactByIdWithMandatoryParameters() throws Exception {
 
         esbRequestHeadersMap.put("Action", "urn:getContactById");
@@ -158,7 +159,6 @@ public class FreeagentConnectorIntegrationTest extends ConnectorIntegrationTestB
 
         Assert.assertEquals(apiResponseObject.getString("first_name"), esbResponseObject.getString("first_name"));
         Assert.assertEquals(apiResponseObject.getString("last_name"), esbResponseObject.getString("last_name"));
-        Assert.assertEquals(apiResponseObject.getString("created_at"), esbResponseObject.getString("created_at"));
         Assert.assertEquals(apiResponseObject.getString("status"), esbResponseObject.getString("status"));
 
     }
@@ -166,7 +166,8 @@ public class FreeagentConnectorIntegrationTest extends ConnectorIntegrationTestB
     /**
      * Positive test case for listContacts method with mandatory parameters.
      */
-    @Test(dependsOnMethods = { "testCreateContactWithMandatoryParameters", "testCreateContactWithOptionalParameters" }, groups = { "wso2.esb" }, description = "freeagent {listContacts} integration test with mandatory parameters.")
+    @Test(dependsOnMethods = { "testCreateContactWithMandatoryParameters", "testCreateContactWithOptionalParameters" },
+            groups = { "wso2.esb" }, description = "freeagent {listContacts} integration test with mandatory parameters.")
     public void testListContactsWithMandatoryParameters() throws Exception {
 
         esbRequestHeadersMap.put("Action", "urn:listContacts");
@@ -195,7 +196,8 @@ public class FreeagentConnectorIntegrationTest extends ConnectorIntegrationTestB
     /**
      * Positive test case for listContacts method with optional parameters.
      */
-    @Test(dependsOnMethods = { "testCreateContactWithMandatoryParameters", "testCreateContactWithOptionalParameters" }, groups = { "wso2.esb" }, description = "freeagent {listContacts} integration test with optional parameters.")
+    @Test(dependsOnMethods = { "testCreateContactWithMandatoryParameters", "testCreateContactWithOptionalParameters" },
+            groups = { "wso2.esb" }, description = "freeagent {listContacts} integration test with optional parameters.")
     public void testListContactsWithOptionalParameters() throws Exception {
 
         esbRequestHeadersMap.put("Action", "urn:listContacts");
@@ -247,7 +249,8 @@ public class FreeagentConnectorIntegrationTest extends ConnectorIntegrationTestB
     /**
      * Positive test case for createProject method with mandatory parameters.
      */
-    @Test(dependsOnMethods = { "testCreateContactWithMandatoryParameters" }, groups = { "wso2.esb" }, description = "freeagent {createProject} integration test with mandatory parameters.")
+    @Test(dependsOnMethods = { "testCreateContactWithMandatoryParameters" }, groups = { "wso2.esb" },
+            description = "freeagent {createProject} integration test with mandatory parameters.")
     public void testCreateProjectWithMandatoryParameters() throws Exception {
 
         esbRequestHeadersMap.put("Action", "urn:createProject");
@@ -275,7 +278,8 @@ public class FreeagentConnectorIntegrationTest extends ConnectorIntegrationTestB
     /**
      * Positive test case for createProject method with Optional parameters.
      */
-    @Test(dependsOnMethods = { "testCreateContactWithMandatoryParameters" }, groups = { "wso2.esb" }, description = "freeagent {createProject} integration test with optional parameters.")
+    @Test(dependsOnMethods = { "testCreateContactWithMandatoryParameters" }, groups = { "wso2.esb" },
+            description = "freeagent {createProject} integration test with optional parameters.")
     public void testCreateProjectWithOptionalParameters() throws Exception {
 
         esbRequestHeadersMap.put("Action", "urn:createProject");
@@ -325,7 +329,8 @@ public class FreeagentConnectorIntegrationTest extends ConnectorIntegrationTestB
     /**
      * Positive test case for getProjectById method with mandatory parameters.
      */
-    @Test(dependsOnMethods = { "testCreateProjectWithMandatoryParameters" }, groups = { "wso2.esb" }, description = "freeagent {getProjectById} integration test with mandatory parameters.")
+    @Test(dependsOnMethods = { "testCreateProjectWithMandatoryParameters" }, groups = { "wso2.esb" },
+            description = "freeagent {getProjectById} integration test with mandatory parameters.")
     public void testGetProjectByIdWithMandatoryParameters() throws Exception {
 
         esbRequestHeadersMap.put("Action", "urn:getProjectById");
@@ -351,7 +356,8 @@ public class FreeagentConnectorIntegrationTest extends ConnectorIntegrationTestB
     /**
      * Test listProjects method with Mandatory Parameters.
      */
-    @Test(dependsOnMethods = { "testCreateProjectWithMandatoryParameters", "testCreateProjectWithOptionalParameters" }, description = "freeagent {listProjects} integration test with mandatory parameters.")
+    @Test(dependsOnMethods = { "testCreateProjectWithMandatoryParameters", "testCreateProjectWithOptionalParameters" },
+            description = "freeagent {listProjects} integration test with mandatory parameters.")
     public void testListProjectsWithMandatoryParameters() throws Exception {
 
         esbRequestHeadersMap.put("Action", "urn:listProjects");
@@ -378,7 +384,8 @@ public class FreeagentConnectorIntegrationTest extends ConnectorIntegrationTestB
     /**
      * Test listProjects method with Optional Parameters.
      */
-    @Test(dependsOnMethods = { "testCreateProjectWithMandatoryParameters", "testCreateProjectWithOptionalParameters" }, description = "freeagent {listProjects} integration test with optional parameters.")
+    @Test(dependsOnMethods = { "testCreateProjectWithMandatoryParameters", "testCreateProjectWithOptionalParameters" },
+            description = "freeagent {listProjects} integration test with optional parameters.")
     public void testListProjectsWithOptionalParameters() throws Exception {
 
         esbRequestHeadersMap.put("Action", "urn:listProjects");
@@ -431,13 +438,13 @@ public class FreeagentConnectorIntegrationTest extends ConnectorIntegrationTestB
     /**
      * Positive test case for createInvoice method with mandatory parameters.
      */
-    @Test(dependsOnMethods = { "testCreateContactWithMandatoryParameters" }, groups = { "wso2.esb" }, description = "freeagent {createInvoice} integration test with mandatory parameters.")
+    @Test(dependsOnMethods = { "testCreateContactWithMandatoryParameters" }, groups = { "wso2.esb" },
+            description = "freeagent {createInvoice} integration test with mandatory parameters.")
     public void testCreateInvoiceWithMandatoryParameters() throws Exception {
 
         esbRequestHeadersMap.put("Action", "urn:createInvoice");
         RestResponse<JSONObject> esbRestResponse =
                 sendJsonRestRequest(proxyUrl, "POST", esbRequestHeadersMap, "esb_createInvoice_mandatory.json");
-
         JSONObject esbResponseObject = esbRestResponse.getBody().getJSONObject("invoice");
 
         String url = esbResponseObject.get("url").toString();
@@ -445,6 +452,7 @@ public class FreeagentConnectorIntegrationTest extends ConnectorIntegrationTestB
         connectorProperties.setProperty("invoiceId", invoiceId);
 
         String apiEndPoint = connectorProperties.getProperty("apiUrl") + "/v2/invoices/" + invoiceId;
+
         RestResponse<JSONObject> apiRestResponse = sendJsonRestRequest(apiEndPoint, "GET", apiRequestHeadersMap);
 
         JSONObject apiResponseObject = apiRestResponse.getBody().getJSONObject("invoice");
@@ -459,7 +467,8 @@ public class FreeagentConnectorIntegrationTest extends ConnectorIntegrationTestB
     /**
      * Positive test case for createInvoice method with optional parameters.
      */
-    @Test(dependsOnMethods = { "testCreateContactWithMandatoryParameters" }, groups = { "wso2.esb" }, description = "freeagent {createInvoice} integration test with optional parameters.")
+    @Test(dependsOnMethods = { "testCreateContactWithMandatoryParameters" }, groups = { "wso2.esb" },
+            description = "freeagent {createInvoice} integration test with optional parameters.")
     public void testCreateInvoiceWithOptionalParameters() throws Exception {
 
         esbRequestHeadersMap.put("Action", "urn:createInvoice");
@@ -467,7 +476,6 @@ public class FreeagentConnectorIntegrationTest extends ConnectorIntegrationTestB
                 sendJsonRestRequest(proxyUrl, "POST", esbRequestHeadersMap, "esb_createInvoice_optional.json");
 
         JSONObject esbResponseObject = esbRestResponse.getBody().getJSONObject("invoice");
-
         String url = esbResponseObject.get("url").toString();
         String invoiceId = getEntity(url);
 
@@ -506,7 +514,8 @@ public class FreeagentConnectorIntegrationTest extends ConnectorIntegrationTestB
     /**
      * Test listInvoices method with Mandatory Parameters.
      */
-    @Test(dependsOnMethods = { "testCreateInvoiceWithMandatoryParameters", "testCreateInvoiceWithOptionalParameters" }, description = "freeagent {listInvoices} integration test with mandatory parameters.")
+    @Test(dependsOnMethods = { "testCreateInvoiceWithMandatoryParameters", "testCreateInvoiceWithOptionalParameters" },
+            description = "freeagent {listInvoices} integration test with mandatory parameters.")
     public void testListInvoicesWithMandatoryParameters() throws Exception {
 
         esbRequestHeadersMap.put("Action", "urn:listInvoices");
@@ -533,7 +542,8 @@ public class FreeagentConnectorIntegrationTest extends ConnectorIntegrationTestB
     /**
      * Test listInvoices method with Optional Parameters.
      */
-    @Test(dependsOnMethods = { "testCreateInvoiceWithMandatoryParameters", "testCreateInvoiceWithOptionalParameters" }, description = "freeagent {listInvoices} integration test with optional parameters.")
+    @Test(dependsOnMethods = { "testCreateInvoiceWithMandatoryParameters", "testCreateInvoiceWithOptionalParameters" },
+            description = "freeagent {listInvoices} integration test with optional parameters.")
     public void testListInvoicesWithOptionalParameters() throws Exception {
 
         esbRequestHeadersMap.put("Action", "urn:listInvoices");
@@ -584,7 +594,8 @@ public class FreeagentConnectorIntegrationTest extends ConnectorIntegrationTestB
     /**
      * Positive test case for getInvoiceById method with mandatory parameters.
      */
-    @Test(dependsOnMethods = { "testCreateInvoiceWithMandatoryParameters" }, groups = { "wso2.esb" }, description = "freeagent {getInvoiceById} integration test with mandatory parameters.")
+    @Test(dependsOnMethods = { "testCreateInvoiceWithMandatoryParameters" }, groups = { "wso2.esb" },
+            description = "freeagent {getInvoiceById} integration test with mandatory parameters.")
     public void testGetInvoiceByIdWithMandatoryParameters() throws Exception {
 
         esbRequestHeadersMap.put("Action", "urn:getInvoiceById");
@@ -610,7 +621,8 @@ public class FreeagentConnectorIntegrationTest extends ConnectorIntegrationTestB
     /**
      * Positive test case for createTask method with mandatory parameters.
      */
-    @Test(dependsOnMethods = { "testCreateProjectWithMandatoryParameters" }, groups = { "wso2.esb" }, description = "freeagent {createTask} integration test with mandatory parameters.")
+    @Test(dependsOnMethods = { "testCreateProjectWithMandatoryParameters" }, groups = { "wso2.esb" },
+            description = "freeagent {createTask} integration test with mandatory parameters.")
     public void testCreateTaskWithMandatoryParameters() throws Exception {
 
         esbRequestHeadersMap.put("Action", "urn:createTask");
@@ -637,7 +649,8 @@ public class FreeagentConnectorIntegrationTest extends ConnectorIntegrationTestB
     /**
      * Positive test case for createTask method with optional parameters.
      */
-    @Test(dependsOnMethods = { "testCreateProjectWithMandatoryParameters" }, groups = { "wso2.esb" }, description = "freeagent {createTask} integration test with optional parameters.")
+    @Test(dependsOnMethods = { "testCreateProjectWithMandatoryParameters" }, groups = { "wso2.esb" },
+            description = "freeagent {createTask} integration test with optional parameters.")
     public void testCreateTaskWithOptionalParameters() throws Exception {
 
         esbRequestHeadersMap.put("Action", "urn:createTask");
@@ -686,8 +699,8 @@ public class FreeagentConnectorIntegrationTest extends ConnectorIntegrationTestB
     /**
      * Positive test case for listTasks method with mandatory parameters.
      */
-    @Test(groups = { "wso2.esb" }, dependsOnMethods = { "testCreateTaskWithOptionalParameters",
-            "testCreateTaskWithOptionalParameters" }, description = "freeagent {listTasks} integration test with mandatory parameters.")
+    @Test(groups = { "wso2.esb" }, dependsOnMethods = { "testCreateTaskWithOptionalParameters"},
+            description = "freeagent {listTasks} integration test with mandatory parameters.")
     public void testListTasksWithMandatoryParameters() throws Exception {
 
         esbRequestHeadersMap.put("Action", "urn:listTasks");
@@ -715,7 +728,8 @@ public class FreeagentConnectorIntegrationTest extends ConnectorIntegrationTestB
     /**
      * Positive test case for getTaskById method with mandatory parameters.
      */
-    @Test(groups = { "wso2.esb" }, dependsOnMethods = { "testCreateTaskWithMandatoryParameters" }, description = "freeagent {getTaskById} integration test with mandatory parameters.")
+    @Test(groups = { "wso2.esb" }, dependsOnMethods = { "testCreateTaskWithMandatoryParameters" },
+            description = "freeagent {getTaskById} integration test with mandatory parameters.")
     public void testGetTaskByIdWithMandatoryParameters() throws Exception {
 
         esbRequestHeadersMap.put("Action", "urn:getTaskById");
@@ -768,7 +782,8 @@ public class FreeagentConnectorIntegrationTest extends ConnectorIntegrationTestB
     /**
      * Positive test case for getUserById method with mandatory parameters.
      */
-    @Test(groups = { "wso2.esb" }, dependsOnMethods = { "testListUsersWithMandatoryParameters" }, description = "freeagent {urn:getUserById} integration test with mandatory parameters.")
+    @Test(groups = { "wso2.esb" }, dependsOnMethods = { "testListUsersWithMandatoryParameters" },
+            description = "freeagent {urn:getUserById} integration test with mandatory parameters.")
     public void testGetUserByIdWithMandatoryParameters() throws Exception {
 
         esbRequestHeadersMap.put("Action", "urn:getUserById");
@@ -793,7 +808,8 @@ public class FreeagentConnectorIntegrationTest extends ConnectorIntegrationTestB
      * Positive test case for createTimeSlip method with mandatory parameters.
      */
     @Test(dependsOnMethods = { "testCreateProjectWithMandatoryParameters", "testCreateTaskWithMandatoryParameters",
-            "testListUsersWithMandatoryParameters" }, groups = { "wso2.esb" }, description = "freeagent {createTimeSlip} integration test with mandatory parameters.")
+            "testListUsersWithMandatoryParameters" }, groups = { "wso2.esb" },
+            description = "freeagent {createTimeSlip} integration test with mandatory parameters.")
     public void testCreateTimeSlipWithMandatoryParameters() throws Exception {
 
         esbRequestHeadersMap.put("Action", "urn:createTimeSlip");
@@ -847,7 +863,8 @@ public class FreeagentConnectorIntegrationTest extends ConnectorIntegrationTestB
     /**
      * Positive test case for getTimeSlipById method with mandatory parameters.
      */
-    @Test(dependsOnMethods = { "testCreateTimeSlipWithMandatoryParameters" }, groups = { "wso2.esb" }, description = "freeagent {getTimeSlipById} integration test with mandatory parameters.")
+    @Test(dependsOnMethods = { "testCreateTimeSlipWithMandatoryParameters" }, groups = { "wso2.esb" },
+            description = "freeagent {getTimeSlipById} integration test with mandatory parameters.")
     public void testGetTimeSlipByIdWithMandatoryParameters() throws Exception {
 
         esbRequestHeadersMap.put("Action", "urn:getTimeSlipById");
@@ -873,7 +890,8 @@ public class FreeagentConnectorIntegrationTest extends ConnectorIntegrationTestB
     /**
      * Positive test case for listTimeSlips method with mandatory parameters.
      */
-    @Test(dependsOnMethods = { "testCreateTimeSlipWithMandatoryParameters" }, groups = { "wso2.esb" }, description = "freeagent {listTimeSlips} integration test with mandatory parameters.")
+    @Test(dependsOnMethods = { "testCreateTimeSlipWithMandatoryParameters" }, groups = { "wso2.esb" },
+            description = "freeagent {listTimeSlips} integration test with mandatory parameters.")
     public void testListTimeSlipsWithMandatoryParameters() throws Exception {
 
         esbRequestHeadersMap.put("Action", "urn:listTimeSlips");
@@ -901,7 +919,8 @@ public class FreeagentConnectorIntegrationTest extends ConnectorIntegrationTestB
     /**
      * Positive test case for listTimeSlips method with optional parameters.
      */
-    @Test(dependsOnMethods = { "testCreateTimeSlipWithMandatoryParameters" }, groups = { "wso2.esb" }, description = "freeagent {listTimeSlips} integration test with optional parameters.")
+    @Test(dependsOnMethods = { "testCreateTimeSlipWithMandatoryParameters" }, groups = { "wso2.esb" },
+            description = "freeagent {listTimeSlips} integration test with optional parameters.")
     public void testListTimeSlipsWithOptionalParameters() throws Exception {
 
         esbRequestHeadersMap.put("Action", "urn:listTimeSlips");
@@ -964,5 +983,4 @@ public class FreeagentConnectorIntegrationTest extends ConnectorIntegrationTestB
         
         return id;
     }
-    
 }
