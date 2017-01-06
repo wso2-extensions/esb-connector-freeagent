@@ -18,9 +18,6 @@
 
 package org.wso2.carbon.connector.integration.test.freeagent;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.testng.Assert;
@@ -28,6 +25,9 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import org.wso2.connector.integration.test.base.ConnectorIntegrationTestBase;
 import org.wso2.connector.integration.test.base.RestResponse;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class FreeagentConnectorIntegrationTest extends ConnectorIntegrationTestBase {
     
@@ -41,7 +41,7 @@ public class FreeagentConnectorIntegrationTest extends ConnectorIntegrationTestB
     @BeforeClass(alwaysRun = true)
     public void setEnvironment() throws Exception {
     
-        init("freeagent-connector-1.0.1-SNAPSHOT");
+        init("freeagent-connector-1.0.2-SNAPSHOT");
         
         esbRequestHeadersMap.put("Accept-Charset", "UTF-8");
         esbRequestHeadersMap.put("Content-Type", "application/json");
@@ -458,7 +458,6 @@ public class FreeagentConnectorIntegrationTest extends ConnectorIntegrationTestB
         JSONObject apiResponseObject = apiRestResponse.getBody().getJSONObject("invoice");
 
         Assert.assertEquals(apiResponseObject.get("dated_on").toString(), connectorProperties.get("invoiceDatedOn"));
-        Assert.assertEquals(apiResponseObject.get("created_at").toString(), esbResponseObject.get("created_at"));
         Assert.assertEquals(apiResponseObject.get("payment_terms_in_days").toString(),
                 connectorProperties.get("invoicePaymentTermsInDays"));
 
