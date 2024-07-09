@@ -4,7 +4,7 @@
     "category": "Billing and Accounting",
     "documentationUrl": "https://docs.wso2.com/display/ESBCONNECTORS/FreeAgent+Connector",
     "description": "",
-    "status": "Unsupported",
+    "status": "Active",
     "labels": [
         "connector"
     ],
